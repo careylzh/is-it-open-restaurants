@@ -1,5 +1,6 @@
 # is-it-open-restaurants
 Simple Web App to query Restaurant Opening Hours (from a given csv)
+Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e81
 
 ## Latest Notes
 - Successfully parsed and populated AWS Elasticsearch(abbreviated ES, not ECMA) DB with Kibana Console
