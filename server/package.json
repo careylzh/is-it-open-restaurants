@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "attempt to connect aws-elasticsearch-connector & (tbc reactjs-compatible) REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "careylzh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
