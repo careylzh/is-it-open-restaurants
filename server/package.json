@@ -4,7 +4,8 @@
   "description": "attempt to connect aws-elasticsearch-connector & (tbc reactjs-compatible) REST API",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "test": "node index.js",
+    "start": "node index.js"
   },
   "author": "careylzh",
   "license": "ISC",
