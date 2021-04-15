@@ -13,10 +13,11 @@ Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e
 
 ## AWS Elasticsearch
 - main index for all data 2214 data points: collection_of_restaurants
-- Kibana endpoint for testing (internally revealled : 
+- Kibana endpoint for testing (internally revealed) has login credentials that is differently set from aws IAM/secret key authentication
 
-## Reverse Proxy using nginx vs AWS API Gateway Interface
-- We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
+## API Protection: Reverse Proxy using nginx vs AWS API Gateway Interface
+- We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. 
+- API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
 
 ## TODO - General
 - [x] requirement analysis, architecture planning for scalability
@@ -25,15 +26,16 @@ Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e
 
 ## TODO - frontend 
 - [ ] frontend wireframe in terms of html elements 
-- [ ] implement jquery + plain js implementation
-- [ ] explore reactjs search bar and axios js REST API
+- [ ] implement jquery + plain js for search bar
+- [ ] implement jquery/plain js datepicker
+- [ ] explore reactjs search bar, datepicker and axios js REST API
 
 ## TODO - backend
 - [x] set up AWS ES instance
 - [x] parse data into json bulk format (req of Elasticsearch dbs)
 - [x] populate data into AWS ES instance (used Kibana console)
-- [ ] implement lambda function to interface betwn AWS gateway and Elastic Searcj
-- [ ] peform unit test lambda function using AWS Lambda Web Testing Interface
+- [ ] implement lambda function to interface betwn AWS gateway and Elastic Search
+- [ ] peform unit test on lambda function using AWS Lambda Web Testing Interface
 - [ ] fix annoying CORS issue on API gateway/lambda function
 - [ ] explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
 - [ ] LAST-RESORT BY 17/4/21 5PM: implement Firebase db with reactjs front end (easy)
