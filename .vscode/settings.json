@@ -1,3 +1,4 @@
 {
     "git.ignoreLimitWarning": true
 }
+//some git commands might not work in UI cuz of sheer size of react bootstrap dependencies
