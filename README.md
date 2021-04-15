@@ -36,4 +36,4 @@ Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e
 - [ ] peform unit test lambda function using AWS Lambda Web Testing Interface
 - [ ] fix annoying CORS issue on API gateway/lambda function
 - [ ] explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
-- [ ] LAST-RESORT BY 16/4/21 10PM: implement Firebase db with reactjs front end (easy)
+- [ ] LAST-RESORT BY 17/4/21 5PM: implement Firebase db with reactjs front end (easy)
