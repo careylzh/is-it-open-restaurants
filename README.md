@@ -15,7 +15,7 @@ Although final deployment is simply reactjs on netlify --> jsonbin.io REST API -
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on netlify:   | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail) | AWS ElasticSearch (success) |
+| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test) | AWS ElasticSearch (success) |
 
 ## Latest Notes
 - Successfully parsed and populated AWS Elasticsearch(abbreviated ES, not ECMA) DB with Kibana Console
