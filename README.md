@@ -45,7 +45,7 @@ npm start
 
 ## TODO - General
 - [x] requirement analysis, architecture planning for scalability
-- [ ] set up proj structure using npx/npm for client and server folders, helper functions 
+- [x] set up proj structure using npx/npm for client and server folders, helper functions 
 - [x] set up branches (master=live, dev-reactjs-jsonbin, dev-jquery-aws-elasticsearch)
 - [x] deploy v0.9.4 from master branch
 
@@ -53,10 +53,10 @@ npm start
 ### reactjs-jsonbin
 - [x] frontend wireframe in terms of html elements 
 - [x] implement reactjs search bar and native js REST API
-- [ ] implement reactjs datepicker and port over python data retrieval code given data to js
+- [ ] implement tab navigation/drawer reactjs
+- [ ] implement reactjs datepicker and write found python data retrieval code for datepicker in js 
 - [ ] css formatting reactjs (not a priority)
 - [ ] create reactjs Collections page for one user
-- [ ] implement tab navigation/drawer reactjs
 - [ ] implement jquery + plain js for search bar
 - [ ] implement jquery/plain js datepicker
 
@@ -65,6 +65,7 @@ npm start
 - [x] parse data into json bulk format (req of Elasticsearch dbs)
 - [x] populate data into AWS ES instance (used Kibana console)
 - [x] implement lambda function to interface betwn AWS gateway and Elastic Search
+### AWS configs (additional explorations)
 - [ ] peform unit test on lambda function using AWS Lambda Web Testing Interface
 - [ ] fix annoying CORS issue on API gateway/lambda function
 - [ ] create new branch from explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
