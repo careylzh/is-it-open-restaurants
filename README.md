@@ -42,7 +42,7 @@ Although final deployment is simply reactjs on netlify --> jsonbin.io REST API -
 ## TODO - frontend 
 - [x] frontend wireframe in terms of html elements 
 - [x] implement reactjs search bar and native js REST API
-- [] implement reactjs datepicker and port over python data retrieval code given data to js
+- [ ] implement reactjs datepicker and port over python data retrieval code given data to js
 - [ ] css formatting reactjs (not a priority)
 - [ ] create reactjs Collections page for one user
 - [ ] implement tab navigation/drawer reactjs
