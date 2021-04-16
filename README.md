@@ -15,9 +15,10 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed), lambda function (deployed). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
+| jquery-aws-elasticsearch | jquery(undeployed, new browser error in chrome console) | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
+- CORs issue fixed by deleting API Gateway and regenerating but checking the 5xx and 4xx tickboxes. Verified using http://client.cors-api.appspot.com/client
 - master currently running based on branch dev-reactjs-jsonbin
 ```
 git clone https://github.com/careylzh/is-it-open-restaurants.git
