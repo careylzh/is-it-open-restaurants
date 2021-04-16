@@ -9,13 +9,13 @@ Keeping master branch as the latest working full stack deployment, so I pull-req
 
 I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
 
-While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function. I couldn't get it to work, despite having deployed various parts of the intial stack design. 
+While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function. I couldn't fix browser error, despite having deployed most parts of the intial stack design. 
 
 ## What's Deployed and Where?
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
+| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed), lambda function (deployed). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
 - master currently running based on branch dev-reactjs-jsonbin
@@ -49,7 +49,7 @@ npm start
 #### API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
 - We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. 
 - API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
-- Limited by CORS settings despite following resources and communicating with AWS Technical Writer SGT Apr 16 2021 9.30pm (CA 6.30am)
+- [FIXED] Limited by CORS settings despite following resources and communicating with AWS Technical Writer SGT Apr 16 2021 9.30pm (CA 6.30am)
 - systematically tested the following solutions:
   - https://stackoverflow.com/questions/55125633/why-do-i-get-a-cors-error-on-api-gateway-get-request-when-the-options-request-ha
   - https://stackoverflow.com/questions/35190615/api-gateway-cors-no-access-control-allow-origin-header
@@ -57,11 +57,12 @@ npm start
   - https://github.com/vendia/serverless-express/issues/90
   - https://enable-cors.org/server_awsapigateway.html
   - https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141
+ 
 #### AWS Lambda: the Serverless, event-triggered faciltator
 -  component that facilitates communication between API Gateway
 -  talks to elasticsearch API to return documents of a particular index
 -  could either write separate lambda fns for separate API calls from reactjs/jquery. Lambda functions will form the backend like how express.js routes data from frontend to db, vice versa
-- Lambda function deployed successfully, but CORS-issue on API Gateway endpoint persists. 
+- Lambda function deployed successfully
 - How to update lambda fn:
   -  navigate to LambdaFunction folder
   -  ```pip install -t './' [new dependencies]```
@@ -74,7 +75,7 @@ npm start
 - [x] set up proj structure using npx/npm for client and server folders, helper functions 
 - [x] set up branches (master=live, dev-reactjs-jsonbin, dev-jquery-aws-elasticsearch)
 - [x] deploy v0.9.4 from master branch
-- [ ] update deployment notes here w.r.t dev-jquery-aws-elasticsearch branch (alot of work) 
+- [x] update deployment notes here w.r.t dev-jquery-aws-elasticsearch branch (alot of work) 
 
 ## TODO - frontend 
 ### reactjs-jsonbin
@@ -84,7 +85,7 @@ npm start
 - [ ] implement reactjs datepicker and write found python data retrieval code for datepicker in js 
 - [ ] css formatting reactjs (not a priority)
 - [ ] create reactjs Collections page for one user
-- [ ] implement jquery + plain js for search bar
+- [x] implement jquery + plain js for search bar
 - [ ] implement jquery/plain js datepicker
 
 ## TODO - backend
@@ -93,8 +94,8 @@ npm start
 - [x] populate data into AWS ES instance (used Kibana console)
 - [x] implement lambda function to interface betwn AWS gateway and Elastic Search
 ### AWS configs (additional explorations)
-- [ ] peform unit test on lambda function using AWS Lambda Web Testing Interface
-- [ ] fix annoying CORS issue on API gateway/lambda function
+- [x] peform unit test on lambda function using AWS Lambda Web Testing Interface (used API Gateway Testing Interface instead
+- [x] fix annoying CORS issue on API gateway/lambda function
 - [ ] create new branch from explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
 
 - [x] LAST-RESORT BY 17/4/21 5PM: implement Firebase/jsonbin.io db with reactjs front end if AWS Full Stack doesn't work
