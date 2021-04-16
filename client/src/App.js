@@ -1,10 +1,12 @@
 import './App.css';
 
+import SearchPage from './Components/SearchPage'
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      
+      <SearchPage />
     </div>
   );
 }
