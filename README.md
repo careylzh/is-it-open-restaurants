@@ -46,7 +46,7 @@ npm start
 - main index for all data 2214 data points: collection_of_restaurants
 - Kibana endpoint for testing (internally revealed) has login credentials that is differently set from aws IAM/secret key authentication
 
-## API Protection: Reverse Proxy using nginx vs AWS API Gateway Interface
+## API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
 - We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. 
 - API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
 
