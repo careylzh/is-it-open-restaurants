@@ -40,14 +40,14 @@ Although final deployment is simply reactjs on netlify --> jsonbin.io REST API -
 - [ ] set up branches (master=live, dev-reactjs, dev-express, dev-jquery)
 
 ## TODO - frontend 
-- [ ] frontend wireframe in terms of html elements 
+- [x] frontend wireframe in terms of html elements 
+- [x] implement reactjs search bar and native js REST API
+- [] implement reactjs datepicker and port over python data retrieval code given data to js
+- [ ] css formatting reactjs (not a priority)
+- [ ] create reactjs Collections page for one user
+- [ ] implement tab navigation/drawer reactjs
 - [ ] implement jquery + plain js for search bar
 - [ ] implement jquery/plain js datepicker
-- [ ] implement reactjs search bar and native js REST API
-- [ ] implement reactjs datepicker and port over python data retrieval code given data to js
-- [ ] css formatting reactjs
-- [ ] create reactjs Collections page for one user
-- [ ] implement tab navigation/drawer
 
 ## TODO - backend
 - [x] set up AWS ES instance
