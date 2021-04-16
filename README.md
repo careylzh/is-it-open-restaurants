@@ -5,7 +5,7 @@ Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e
 ## How to use this repo
 This readme on master describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fn in aws). 
 
-Keeping master branch as the latest working full stack deployment, so I pull-req to from a dev branch to master once a version is complete. 
+Keeping master branch as the latest working full stack deployment, so I pull-req from a dev branch to master once a version is complete. 
 
 I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
 
