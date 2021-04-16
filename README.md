@@ -18,7 +18,7 @@ Although final deployment is simply reactjs on netlify --> jsonbin.io REST API -
 | jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test) | AWS ElasticSearch (success) |
 
 ## Latest Notes
-- master currently running based on branch reactjs-jsonbin
+- master currently running based on branch dev-reactjs-jsonbin
 ```
 git clone https://github.com/careylzh/is-it-open-restaurants.git
 cd client
