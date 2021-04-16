@@ -48,15 +48,14 @@ npm start
 #### API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
 - We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. 
 - API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
-- Limited by CORS settings despite following resources and communicating with AWS Technical Writer:
+- Limited by CORS settings despite following resources and communicating with AWS Technical Writer SGT Apr 16 2021 9.30pm (CA 6.30am)
+- systematically tested the following solutions:
   - https://stackoverflow.com/questions/55125633/why-do-i-get-a-cors-error-on-api-gateway-get-request-when-the-options-request-ha
   - https://stackoverflow.com/questions/35190615/api-gateway-cors-no-access-control-allow-origin-header
   - https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html
   - https://github.com/vendia/serverless-express/issues/90
   - https://enable-cors.org/server_awsapigateway.html
   - https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141
-- systematically tested the following solutions:
-  - set API gatway integration request as mock, added 
 #### AWS Lambda: the Serverless, event-triggered faciltator
 -  component that facilitates communication between API Gateway
 -  talks to elasticsearch API to return documents of a particular index
