@@ -40,7 +40,7 @@ npm start
 - If API Gateway/Lambda Function is configured properly: Finetune Cloudwatch logs to throw exact 5xx/4xx error statuses. 
 - Paused development for dev-jquery-aws-elasticsearch stack due to unresolved CORS setting despite setting "Access-Control-Allow-Origin" to '*' on AWS API gateway
 
-### The follow sections explain the initial technical decisions/details revolving each component/stack.
+### The follow sections explain the initial technical decisions/progress revolving dev-jquery-aws-elasticsearch.
 #### AWS Elasticsearch
 [add photo for kibana console queries]
 - main index for all data 2214 data points: collection_of_restaurants
