@@ -25,6 +25,7 @@ cd client
 npm i
 npm start
 ```
+- simplified stack because found jsonbin.io, which auto-configs CORS-settings. 
 ### dev-reactjs-jsonbin specific notes: 
 - search by name and display openingHours done. 
 - To add datepicker and integrate datepicking search algo in js (semantic versioning should be 0.9.7 now - when tabnav is complete(collections page) 0.9.8, 0.9.8 favouriting function, 0.9.9 when POST queries to json bin are done, 1.0.0 when passing date from datepicker UI to SearchBarResults component)
