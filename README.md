@@ -74,7 +74,7 @@ npm start
 - [x] set up proj structure using npx/npm for client and server folders, helper functions 
 - [x] set up branches (master=live, dev-reactjs-jsonbin, dev-jquery-aws-elasticsearch)
 - [x] deploy v0.9.4 from master branch
-- [ ] write deployment readme in dev-jquery-aws-elasticsearch branch (alot of work) 
+- [ ] update deployment notes here w.r.t dev-jquery-aws-elasticsearch branch (alot of work) 
 
 ## TODO - frontend 
 ### reactjs-jsonbin
