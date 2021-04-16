@@ -11,7 +11,7 @@ const port = 3000;
 app.get("/store_json", (req, res) => {
 //want to get all the relevant documents
 //  result = client.search{elastic search json string} 
-//client.search is an abstracted method from aws-elasticsearch-connector to access elasticsearch api directly
+//client.search is an abstracted method from npm package aws-elasticsearch-connector to access elasticsearch api directly
   res.send(result);
 });
 
