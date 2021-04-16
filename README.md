@@ -15,7 +15,7 @@ Although final deployment is simply reactjs on netlify --> jsonbin.io REST API -
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test) | AWS ElasticSearch (success) |
+| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
 - master currently running based on branch dev-reactjs-jsonbin
