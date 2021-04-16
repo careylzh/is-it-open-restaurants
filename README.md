@@ -2,12 +2,27 @@
 Simple Web App to query Restaurant Opening Hours (from a given csv)
 Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e81
 
+## How to use this repo
+This readme on master describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fn in aws). 
+
+Keeping master branch as the latest working full stack deployment, so I pull-req to from a dev branch to master once a version is complete. 
+
+I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
+
+Although final deployment is simply reactjs on netlify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function although I couldn't get it to work, despite deployed various parts of the stack. 
+
+## What's Deployed and Where?
+| Branch | Frontend  | Backend | Db |
+| ------------- | ------------- | ------------- | ------------- |
+| reactjs-jsonbinio | ReactJS on netlify:   | - (didn't need express) | jsonbin.io |
+| jquery-aws-elasticsearch | jquery(undeployed) | AWS API Gateway (deployed but fail), lambda function (deployed, to test) | AWS ElasticSearch (success) |
+
 ## Latest Notes
 - Successfully parsed and populated AWS Elasticsearch(abbreviated ES, not ECMA) DB with Kibana Console
-- Found working python code to retrieve list of restaurants from raw data given data. Must integrate with 
 - Priortised Name Searching Speed so decided to use non-rel db over rel. Also corrobated w fact that Elasticsearch is industrial grade search eng/db. But number searching might be slow
-- Probably have to reformat openingHours field in elasticsearch restaurants for future usage/ease of access by new, unplanned features 
+- Probably have to reformat openingHours field in elasticsearch restaurants for future usage/ease of access by new, unplanned features eg. new location tag in each json string
 - If API Gateway/Lambda Function is configured properly: Finetine Cloudwatch logs to throw exact 5xx/4xx error statuses. 
+- Paused development for aws stack due to unresolved CORS setting despite setting "Access-Control-Allow-Origin" to '*' on AWS API gateway
 
 ### The follow sections explain the technical decisions/details revolving each component/stack. 
 
@@ -25,19 +40,21 @@ Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e
 - [ ] set up branches (master=live, dev-reactjs, dev-express, dev-jquery)
 
 ## TODO - frontend 
-- [ ] frontend wireframe in terms of html elements 
+- [x] frontend wireframe in terms of html elements 
+- [x] implement reactjs search bar and native js REST API
+- [ ] implement reactjs datepicker and port over python data retrieval code given data to js
+- [ ] css formatting reactjs (not a priority)
+- [ ] create reactjs Collections page for one user
+- [ ] implement tab navigation/drawer reactjs
 - [ ] implement jquery + plain js for search bar
 - [ ] implement jquery/plain js datepicker
-- [ ] explore reactjs search bar, datepicker and axios js REST API
-- [ ] CURL/use kibana to download formatted data in elasticsearch for frontend testing in isolation
 
 ## TODO - backend
 - [x] set up AWS ES instance
 - [x] parse data into json bulk format (req of Elasticsearch dbs)
 - [x] populate data into AWS ES instance (used Kibana console)
-- [ ] implement lambda function to interface betwn AWS gateway and Elastic Search
+- [x] implement lambda function to interface betwn AWS gateway and Elastic Search
 - [ ] peform unit test on lambda function using AWS Lambda Web Testing Interface
 - [ ] fix annoying CORS issue on API gateway/lambda function
-- [ ] explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
-- [ ] LAST-RESORT BY 17/4/21 5PM: implement Firebase db with reactjs front end (easy)
-
+- [ ] create new branch from explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
+- [x] LAST-RESORT BY 17/4/21 5PM: implement Firebase/jsonbin.io db with reactjs front end (easy)
