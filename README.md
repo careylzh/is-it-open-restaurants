@@ -39,16 +39,35 @@ npm start
 - If API Gateway/Lambda Function is configured properly: Finetune Cloudwatch logs to throw exact 5xx/4xx error statuses. 
 - Paused development for jquery-aws-elasticsearch stack due to unresolved CORS setting despite setting "Access-Control-Allow-Origin" to '*' on AWS API gateway
 
-### The follow sections explain the technical decisions/details revolving each component/stack. 
-
-## AWS Elasticsearch
+### The follow sections explain the initial technical decisions/details revolving each component/stack.
+#### AWS Elasticsearch
 [add photo for kibana console queries]
 - main index for all data 2214 data points: collection_of_restaurants
 - Kibana endpoint for testing (internally revealed) has login credentials that is differently set from aws IAM/secret key authentication
 
-## API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
+#### API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
 - We need a a user-facing proxy for API/endpoint protection. While exposing the db endpoint directly to frontend is convenient for api calls, doing so could open db to spams. 
 - API gateway provides traffic burst protections, accessed in AWS IAM --> Search Services --> API Gateway --> Choose the respective gateway --> 
+- Limited by CORS settings despite following resources and communicating with AWS Technical Writer:
+  - https://stackoverflow.com/questions/55125633/why-do-i-get-a-cors-error-on-api-gateway-get-request-when-the-options-request-ha
+  - https://stackoverflow.com/questions/35190615/api-gateway-cors-no-access-control-allow-origin-header
+  - https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html
+  - https://github.com/vendia/serverless-express/issues/90
+  - https://enable-cors.org/server_awsapigateway.html
+  - https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141
+- systematically tested the following solutions:
+  - set API gatway integration request as mock, added 
+#### AWS Lambda: the Serverless, event-triggered faciltator
+-  component that facilitates communication between API Gateway
+-  talks to elasticsearch API to return documents of a particular index
+-  could either write separate lambda fns for separate API calls from reactjs/jquery. Lambda functions will form the backend like how express.js routes data from frontend to db, vice versa
+- Lambda function deployed successfully, but CORS-issue on API Gateway endpoint persists. 
+- How to update lambda fn:
+  -  navigate to LambdaFunction folder
+  -  ```pip install -t './' [new dependencies]```
+  -  modify contents in the handler lambda_function.py
+  https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html
+- Can try using Serverless framework to deploy using CLI so no need keep uploading .zip of your LambdaFunction folder onto AWS console
 
 ## TODO - General
 - [x] requirement analysis, architecture planning for scalability
