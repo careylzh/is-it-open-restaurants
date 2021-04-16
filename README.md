@@ -1,5 +1,5 @@
 # is-it-open-restaurants
-Simple Web App to query Restaurant Opening Hours (from a given csv)
+Simple Web App to query Restaurant Opening Hours (from a given csv) </br>
 Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e81
 
 ## How to use this repo
