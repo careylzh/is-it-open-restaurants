@@ -9,7 +9,7 @@ Keeping master branch as the latest working full stack deployment, so I pull-req
 
 I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
 
-Although final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function although I couldn't get it to work, despite deployed various parts of the stack. 
+While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function. I couldn't get it to work, despite having deployed various parts of the intial stack design. 
 
 ## What's Deployed and Where?
 | Branch | Frontend  | Backend | Db |
