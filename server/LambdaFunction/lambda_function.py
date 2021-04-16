@@ -19,12 +19,12 @@ def lambda_handler(event, context):
         "size": 25,
         "query": {
             "multi_match": {
-                "query": event['queryStringParameter']['q'],
-                "fields": ["fields.restaurantName", "fields.openingHours"]
+                "query": event['queryStringParameters']['q'], #value here is the user's input
+                "fields": ["restaurantName"] #use fields parameter to search by json tags
             }
         }
     }
-
+    
     # ES 6.x requires an explicit Content-Type header
     headers = { "Content-Type": "application/json" }
 
@@ -32,13 +32,13 @@ def lambda_handler(event, context):
     r = requests.get(url, auth=awsauth, headers=headers, data=json.dumps(query))
 
     # Create the response and add some extra content to support CORS
-    # response = {
-    #     "statusCode": 200,
-    #     "headers": {
-    #         "Access-Control-Allow-Origin": '*'
-    #     },
-    #     "isBase64Encoded": False
-    # }
+    response = {
+        "statusCode": 200,
+        "headers": {
+            "Access-Control-Allow-Origin": '*'
+        },
+        "isBase64Encoded": False
+    }
 
     # Add the search results to the response
     response['body'] = r.text
