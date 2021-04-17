@@ -1,4 +1,4 @@
-var awsAPIGatewayEndpoint = ' https://wmx2c9zj6e.execute-api.us-east-2.amazonaws.com/search-es-api-test';
+var awsAPIGatewayEndpoint = 'https://qg7gho5aoj.execute-api.us-east-2.amazonaws.com/search-es-api-with-CORS-1/';
 var loadingdiv = $('#loading');
 var noresults = $('#noresults');
 var resultdiv = $('#results');
@@ -29,11 +29,11 @@ async function search() {
       // Iterate through the results and write them to HTML
       resultdiv.append('<p>Found ' + results.length + ' results.</p>');
       for (var item in results) {
-        let image = results[item]._source.restaurantName;
-        let title = results[item]._source.openingHours;
+        let resNameLocal = results[item]._source.restaurantName;
+        let hrsLocal = results[item]._source.openingHours;
         // Construct the full HTML string that we want to append to the div
         resultdiv.append('<div class="result">' +
-        '<div><h2>'+ restaurantName + '</h2><h3>' + openingHours + '</h3></div>');
+        '<div><h2>'+ resNameLocal + '</h2><h3>' + hrsLocal + '</h3></div>');
       }
     } else {
       noresults.show();
