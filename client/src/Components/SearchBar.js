@@ -11,7 +11,7 @@ const SearchBar = ({input:keyword, onChange:setKeyword}) => {
      style={BarStyling}
      key="random1"
      value={keyword}
-     placeholder={"Faster Search Faster Makannnnnnn!"}
+     placeholder={"Search and Makan"}
      onChange={(e) => setKeyword(e.target.value)} //e is wtv that was passed into this "change function" upon input change
     />
   );
