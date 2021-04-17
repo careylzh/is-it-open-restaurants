@@ -34,7 +34,7 @@ npm start
 - AWS Amplify does snapshot testing on various mobile devices for you so no need ```npm test``` wew [add photo]
 ### dev-reactjs-jsonbin specific notes: 
 - search by name and display openingHours done. 
-- To add datepicker and integrate datepicking search algo in js (semantic versioning should be 0.9.7 now - when tabnav is complete(collections page) 0.9.8, 0.9.8 favouriting function, 0.9.9 when POST queries to json bin are done, 1.0.0 when passing date from datepicker UI to SearchBarResults component)
+- To add datepicker and integrate datepicking search algo in js (semantic versioning should be 0.9.6 now - when tabnav is complete(collections page) 0.9.7, 0.9.8 favouriting function, 0.9.9 when POST queries to json bin are done, 1.0.0 when passing date from datepicker UI to SearchBarResults component)
 ### Separate Adventures:
 - Successfully parsed raw data and populated AWS Elasticsearch(abbreviated ES, not ECMA) DB with Kibana Console in required BULK format
 - Priortised Name Searching Speed so decided to use non-rel db over rel. Also corrobated w fact that Elasticsearch is industrial grade search eng/db. But number searching might be slow
