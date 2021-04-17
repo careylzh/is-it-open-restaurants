@@ -76,7 +76,7 @@ npm start
 ## TODO - General
 - [x] requirement analysis, architecture planning for scalability
 - [x] set up proj structure using npx/npm for client and server folders, helper functions 
-- [x] set up branches (master=live, dev-reactjs-jsonbin, dev-jquery-aws-elasticsearch)
+- [x] set up branches (main=live, dev-reactjs-jsonbin, dev-jquery-aws-elasticsearch)
 - [x] deploy v0.9.4 from master branch
 - [x] update deployment notes here w.r.t dev-jquery-aws-elasticsearch branch (alot of work) 
 
@@ -90,15 +90,19 @@ npm start
 - [ ] create reactjs Collections page for one user
 - [x] implement jquery + plain js for search bar
 - [ ] implement jquery/plain js datepicker
+- [ ] (additional) disconnect from jsonbin db, find out how to connect reactjs to apiGatewayEndpoint
 
 ## TODO - backend
 - [x] set up AWS ES instance
 - [x] parse data into json bulk format (req of Elasticsearch dbs)
 - [x] populate data into AWS ES instance (used Kibana console)
-- [x] implement lambda function to interface betwn AWS gateway and Elastic Search
+- [x] implement lambda function for name search to interface betwn AWS gateway and Elastic Search
+- [ ] implement other CRUD fns on jsonbin.io (datesearch, create collections for this particular user)
+- [ ] authentication in jsonbin.io?
 ### AWS configs (additional explorations)
 - [x] peform unit test on lambda function using AWS Lambda Web Testing Interface (used API Gateway Testing Interface instead
 - [x] fix annoying CORS issue on API gateway/lambda function
+- [ ] implement lambda functions/API gateway methods for other CRUD functions (datesearch, create new indexes for collections for a particular user)
 - [ ] create new branch from explore using aws-elasticsearch-connector (run on separate node instance as reactjs), express to facilitate communication between reactJS and aws es db access
 
 - [x] LAST-RESORT BY 17/4/21 5PM: implement Firebase/jsonbin.io db with reactjs front end if AWS Full Stack doesn't work
