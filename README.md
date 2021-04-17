@@ -8,7 +8,7 @@ This readme on master describes the general updates, TODOS for frontend/backend 
 Keeping master branch as the latest working full stack deployment, so I pull-req from a dev branch to master once a version is complete. 
 
 I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
-[UPDATE: jQuery GET works!!!!! see latest notes]
+[UPDATE: AWS Stack now works too! see latest notes]
 
 While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function.
 
@@ -19,6 +19,7 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | jquery-aws-elasticsearch | jquery(undeployed, new browser error in chrome console) | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
+
 - ERR_NAME_NOT_RESOLVED surfaced because forgot to update new awsApiGatewayEndpoint (main one, not the specific ones for GET, POST etc)
 - CORs issue fixed by deleting API Gateway and regenerating but checking the 5xx and 4xx tickboxes. Verified using http://client.cors-api.appspot.com/client
 - master currently running based on branch dev-reactjs-jsonbin
