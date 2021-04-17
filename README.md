@@ -7,8 +7,7 @@ This readme on master describes the general updates, TODOS for frontend/backend 
 
 Keeping master branch as the latest working full stack deployment, so I pull-req from a dev branch to master once a version is complete. 
 
-I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment.
-[UPDATE: AWS Stack now works too! see latest notes]
+I started off designing my architecture as reactjs -> awsAPIgateway -> lambda function -> AWS Elasticsearch, but faced multiple issues including CORS and lambda fn deployment. So I went for a simpler stack using reactjs --> jsonbin.io (json store), but eventually got my initial design(on branch dev-jquery-aws-elasticsearch) working! 
 
 While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST API --> jsonbin.io db, I can explain my initial architectural decisions of using Elasticsearch, API Gateway and serverless component of lambda function.
 
@@ -16,7 +15,7 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch on AWS Amplify | plain html and jquery's HTTP methods : https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
+| (experimental) jquery-aws-elasticsearch | plain html and jquery's HTTP methods: https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
 
