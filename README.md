@@ -3,7 +3,7 @@ Simple Web App to query Restaurant Opening Hours (from a given csv) </br>
 Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e81
 
 ## How to use this repo
-This readme on master describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fns in aws). 
+This readme on master describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fns in aws) for all branches.
 
 Keeping master branch as the latest working full stack deployment, so I pull-req from a dev branch to master once a version is complete. 
 
@@ -16,7 +16,7 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| jquery-aws-elasticsearch | jquery(undeployed, new browser error in chrome console) | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
+| jquery-aws-elasticsearch on AWS Amplify | plain html and jquery's HTTP methods : https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
 
