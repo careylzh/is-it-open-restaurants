@@ -18,9 +18,10 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | (experimental) jquery-aws-elasticsearch | plain html and jquery's HTTP methods: https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
 
 ## Latest Notes
+- main branch code base currently based on branch dev-reactjs-jsonbin
+- prototyping collections page on dev-reactjs-jsonbin branch, only implemented non-func UI for this feature 
 - ERR_NAME_NOT_RESOLVED surfaced because forgot to update new awsApiGatewayEndpoint (main one, not the specific ones for GET, POST etc)
 - CORs issue fixed by deleting API Gateway and regenerating but checking the 5xx and 4xx tickboxes. Verified using http://client.cors-api.appspot.com/client
-- main branch code base currently based on branch dev-reactjs-jsonbin
 ```
 git clone https://github.com/careylzh/is-it-open-restaurants.git
 cd client
