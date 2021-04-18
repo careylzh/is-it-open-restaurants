@@ -11,7 +11,7 @@ const SearchResultsTable = ({restaurantList=[]}) => {
           return (
             <div key={data.id}>
               <h3>{data.restaurantName}</h3>
-              <p>{data.openingHours}</p>
+              <p>{data.openingHours} <button>❤️</button></p>
 	    </div>	
     	   )	
     	 }
