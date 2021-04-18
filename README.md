@@ -85,7 +85,7 @@ npm start
 ### reactjs-jsonbin
 - [x] frontend wireframe in terms of html elements 
 - [x] implement reactjs search bar and native js REST API
-- [ ] implement tab navigation/drawer reactjs
+- [x] implement tab navigation/drawer reactjs
 - [ ] implement reactjs datepicker and write found python data retrieval code for datepicker in js 
 - [ ] css formatting reactjs (not a priority)
 - [ ] create reactjs Collections page for one user
@@ -99,7 +99,7 @@ npm start
 - [x] populate data into AWS ES instance (used Kibana console)
 - [x] implement lambda function for name search to interface betwn AWS gateway and Elastic Search
 - [ ] implement other CRUD fns on jsonbin.io (datesearch, create collections for this particular user)
-- [ ] authentication in jsonbin.io?
+- [ ] authentication in jsonbin.io? for collab in future 
 ### AWS configs (additional explorations)
 - [x] peform unit test on lambda function using AWS Lambda Web Testing Interface (used API Gateway Testing Interface instead
 - [x] fix annoying CORS issue on API gateway/lambda function
