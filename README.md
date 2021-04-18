@@ -72,6 +72,7 @@ npm start
   -  ```pip install -t './' [new dependencies]```
   -  modify contents in the handler lambda_function.py
   -  zip the _contents_ of the LambdaFunction folder
+  -  Go to respective AWS Lambda function on AWS Lambda Fn Console and uplaod .zip 
   https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html
 - Can try using Serverless framework to deploy using CLI so no need keep uploading .zip of your LambdaFunction folder onto AWS console
 
