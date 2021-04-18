@@ -45,7 +45,7 @@ npm start
 ### The follow sections explain the initial technical decisions/progress revolving dev-jquery-aws-elasticsearch.
 #### AWS Elasticsearch
 [add photo for kibana console queries]
-- main index for all data 2214 data points: collection_of_restaurants
+- main index for all data 2214 data points: collection_of_shops
 - Kibana endpoint for testing (internally revealed) has login credentials that is differently set from aws IAM/secret key authentication
 
 #### API Protection using AWS API Gateway Interface (probably similar to how nginx works?)
