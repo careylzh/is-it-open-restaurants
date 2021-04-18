@@ -3,7 +3,7 @@ Simple Web App to query Restaurant Opening Hours (from a given csv) </br>
 Task Requirements: https://gist.github.com/seahyc/d013a8f8f1c1be52513cf7b77cce6e81
 
 ## How to use this repo
-This readme on master describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fns in aws) for all branches.
+This readme on main describes the general updates, TODOS for frontend/backend and updates that can't be quantified as code this repo(deployment settings, setting up of db/API gateway/lambda fns in aws) for all branches.
 
 Keeping master branch as the latest working full stack deployment, so I pull-req from a dev branch to master once a version is complete. 
 
