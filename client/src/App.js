@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import SearchPage from './Components/SearchPage'
 
+//TODO: add component CollectionsPage into body of 2nd tab panel when does 
 function App() {
   return (
     <div className="App">
@@ -14,10 +15,10 @@ function App() {
     </TabList>
 
     <TabPanel>
-      <h2><SearchPage /></h2>
+      <SearchPage />
     </TabPanel>
     <TabPanel>
-      <h2>Lists of Favourites</h2> 
+      <h2>Lists of Favourites</h2>
     </TabPanel>
     </Tabs>
       
