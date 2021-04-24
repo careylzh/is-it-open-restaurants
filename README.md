@@ -28,12 +28,15 @@ npm start
 - currently prototyping collections page on dev-reactjs-jsonbin branch, only implemented non-func UI for this feature 
 - ERR_NAME_NOT_RESOLVED surfaced because forgot to update new awsApiGatewayEndpoint (main one, not the specific ones for GET, POST etc)
 - CORs issue fixed by deleting API Gateway and regenerating but checking the 5xx and 4xx tickboxes. Verified using http://client.cors-api.appspot.com/client
-
 - simplified stack because found jsonbin.io, a JSON store which has several benefits:
   - auto-configs CORS-settings
   - simple UI for organising collections of documents
   - can add schema ltr if needed.
 - AWS Amplify does snapshot testing on various mobile devices for you so no need ```npm test``` for snapshots wew [add photo]
+- Elasticsearch noSQL API syntax: using "fields" in lambda fn references the fields in under "_source:" in each document in Elasticsearch 
+ 
+
+
 ### dev-reactjs-jsonbin specific notes: 
 - search by name and display openingHours done. 
 - To add datepicker and integrate datepicking search algo in js (semantic versioning should be 0.9.6 now - when tabnav is complete(collections page) 0.9.7, 0.9.8 favouriting function, 0.9.9 when POST queries to json bin are done, 1.0.0 when passing date from datepicker UI to SearchBarResults component)
@@ -103,6 +106,7 @@ npm start
 - [x] implement lambda function for name search to interface betwn AWS gateway and Elastic Search
 - [ ] implement other CRUD fns on jsonbin.io (datesearch, create collections for this particular user)
 - [ ] authentication in jsonbin.io? for collab in future 
+- [ ] LOGGING: assign authenticated arn to Cloudwatch in settings in API Gateway (so can see exactly which error occurs instead of a generic category of errors 5XX or 4XX)
 ### AWS configs (additional explorations)
 - [x] peform unit test on lambda function using AWS Lambda Web Testing Interface (used API Gateway Testing Interface instead
 - [x] fix annoying CORS issue on API gateway/lambda function
