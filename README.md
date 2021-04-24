@@ -34,7 +34,7 @@ npm start
   - can add schema ltr if needed.
 - AWS Amplify does snapshot testing on various mobile devices for you so no need ```npm test``` for snapshots wew [add photo]
 - Elasticsearch noSQL API syntax: using "fields" in lambda fn references the fields in under "_source:" in each document in Elasticsearch 
- 
+- Lambda fn: edited "queryStringParameters" with "s" and now there's no keyError 
 
 
 ### dev-reactjs-jsonbin specific notes: 
