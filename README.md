@@ -64,7 +64,7 @@ npm start
   - https://github.com/vendia/serverless-express/issues/90
   - https://enable-cors.org/server_awsapigateway.html
   - https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141
-  - Final solution: Delete API Gateway, Enabled CORS and "checked 5xx and 4xx" (first row in CORS settings), deploy API Gateway, redeploy Lambdafunction trigger(you'll see your API Gateway dashboard updated after this)
+  - Final solution: Delete API Gateway, Enabled CORS and "checked 5xx and 4xx" (first row in CORS settings), deploy API Gateway, redeploy Lambdafunction trigger(you'll see your API Gateway dashboard updated after this), add AWS elasticsearch ARN on Elasticsearch side using Kibana UI: Security -> Roles -> all_access -> Mapped Users -> add ARN here under backend roles 
  
 #### AWS Lambda: the Serverless, event-triggered faciltator
 -  component that facilitates communication between API Gateway
