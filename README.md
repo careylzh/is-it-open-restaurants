@@ -107,6 +107,7 @@ npm start
 - [ ] implement other CRUD fns on jsonbin.io (datesearch, create collections for this particular user)
 - [ ] authentication in jsonbin.io? for collab in future 
 - [ ] LOGGING: assign authenticated arn to Cloudwatch in settings in API Gateway (so can see exactly which error occurs instead of a generic category of errors 5XX or 4XX)
+- [ ] parse data into proper json fields (opening hours start, opening hours end for each day): https://ru.stackoverflow.com/questions/953624/%D0%9F%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3-csv-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-%D1%81-%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC
 ### AWS configs (additional explorations)
 - [x] peform unit test on lambda function using AWS Lambda Web Testing Interface (used API Gateway Testing Interface instead
 - [x] fix annoying CORS issue on API gateway/lambda function
