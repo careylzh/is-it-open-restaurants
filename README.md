@@ -15,7 +15,7 @@ While my final deployment is simply reactjs on AWS Amplify --> jsonbin.io REST A
 | Branch | Frontend  | Backend | Db |
 | ------------- | ------------- | ------------- | ------------- |
 | reactjs-jsonbinio | ReactJS on AWS Amplify:  https://main.d2rwu09ypt5g13.amplifyapp.com/ | - (didn't need express) | jsonbin.io |
-| (experimental) jquery-aws-elasticsearch | plain html and jquery's HTTP methods: https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) |
+| (experimental) jquery-aws-elasticsearch | plain html and jquery's HTTP methods: https://dev-jquery-aws-elasticsearch.dxbdt2o26wbkw.amplifyapp.com/ | AWS API Gateway (success), lambda function (success). Update after Consult with AWS Technical Writer Liz Synder | AWS ElasticSearch (success) UPDATE: removed this db instance because instance hours was too expensive, contact lzh.carey@gmail.com for demo|
 
 ## Latest Notes
 - main branch code currently based on branch dev-reactjs-jsonbin
